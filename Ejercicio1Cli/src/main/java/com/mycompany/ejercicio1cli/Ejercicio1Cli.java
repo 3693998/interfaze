@@ -50,16 +50,18 @@ public class Ejercicio1Cli {
         grupo.addOption(new Option("c", "cruel", false, "Hola mundo cruel"));
         opciones.addOptionGroup(grupo);
 
-        //Parseo
+        //Parseamos entradas
         try {
             CommandLineParser parser = new DefaultParser();
             CommandLine cmd = parser.parse(opciones, args);
-
+                    
+            
+            // Si está la opcion de ayuda, la imprimimos y salimos. 
             if (cmd.hasOption("h")) {
                 System.out.println("ayuda");
                 HelpFormatter formatter = new HelpFormatter();
                 formatter.printHelp("h", opciones);
-
+              // si no preguntamos por las demas opciones
             } else {
 
                 if (cmd.hasOption("w")) {
