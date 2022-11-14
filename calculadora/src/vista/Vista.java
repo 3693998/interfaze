@@ -19,7 +19,7 @@ import modelo.Modelo;
 
 
 public class Vista extends javax.swing.JFrame {
-
+  
     double n1 = 0;
     Modelo modelo = new Modelo();
     boolean nuevoNumero = false;
@@ -27,9 +27,14 @@ public class Vista extends javax.swing.JFrame {
     boolean puntoDecimal = false;
     Font pequenya = new Font("Agency FB", Font.BOLD, 20); ;
     Font mediana = new Font("Agency FB", Font.BOLD, 40); ;
-    Font grande = new Font("Agency FB", Font.BOLD, 70); 
-    ComponentAdapter resizeListener = new ComponentAdapter() {
+    Font grande = new Font("Agency FB", Font.BOLD, 70);
+   
+    
+   
+     ComponentAdapter resizeListener = new ComponentAdapter() {
         public void componentResized(ComponentEvent e) {
+          
+           
           //-------------pequeña--------------------------- 
             if(getWidth()<300 && getHeight()<500){
             pantalla.setFont(pequenya);   
@@ -112,10 +117,10 @@ public class Vista extends javax.swing.JFrame {
       
         //CERO
         this.btnCero.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
-                .put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0), "1");
+                .put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0), "0");
         this.btnCero.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
-                .put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD0, 0), "1");
-        this.btnCero.getActionMap().put("1", new AbstractAction() {
+                .put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD0, 0), "0");
+        this.btnCero.getActionMap().put("0", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 btnCero.doClick();
@@ -347,10 +352,10 @@ public class Vista extends javax.swing.JFrame {
         jPanel1.setFocusable(false);
         jPanel1.setMaximumSize(new java.awt.Dimension(3000, 3000));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 400));
-        java.awt.GridBagLayout jPanel1Layout1 = new java.awt.GridBagLayout();
-        jPanel1Layout1.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
-        jPanel1Layout1.rowHeights = new int[] {0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0};
-        jPanel1.setLayout(jPanel1Layout1);
+        java.awt.GridBagLayout jPanel1Layout = new java.awt.GridBagLayout();
+        jPanel1Layout.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
+        jPanel1Layout.rowHeights = new int[] {0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0};
+        jPanel1.setLayout(jPanel1Layout);
 
         btnCinco.setBackground(new java.awt.Color(61, 61, 61));
         btnCinco.setForeground(new java.awt.Color(255, 255, 255));
@@ -941,6 +946,9 @@ public class Vista extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         
+        
+      
+     
     
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
