@@ -290,7 +290,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
         //DIVISIÓN
-        // TODO: cambiar tecla
+      
         this.btnDividir.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke(KeyEvent.VK_7 ,  InputEvent.SHIFT_DOWN_MASK), "/");
         this.btnDividir.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
