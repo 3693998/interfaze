@@ -290,7 +290,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
         //DIVISIÓN
-        // TODO: cambiar tecla
+      
         this.btnDividir.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke(KeyEvent.VK_7 ,  InputEvent.SHIFT_DOWN_MASK), "/");
         this.btnDividir.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
@@ -756,7 +756,7 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCuatroActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        modelo.borrar(modelo.getResultado());
+        modelo.borrar();
         this.pantalla.setText("");
 
     }//GEN-LAST:event_btnBorrarActionPerformed
@@ -843,6 +843,7 @@ public class Vista extends javax.swing.JFrame {
             this.pantalla.setText("");
         } else if (!this.pantalla.getText().isEmpty()) {
             nuevoNumero = true;
+            puntoDecimal = false;
             modelo.setResultado(Double.parseDouble(this.pantalla.getText()));
             this.pantalla.setText("");
         }
@@ -874,6 +875,7 @@ public class Vista extends javax.swing.JFrame {
             this.pantalla.setText("");
         } else if (!this.pantalla.getText().isEmpty()) {
             nuevoNumero = true;
+            puntoDecimal = false;
             modelo.setResultado(Double.parseDouble(this.pantalla.getText()));
             this.pantalla.setText("");
         }
@@ -893,6 +895,7 @@ public class Vista extends javax.swing.JFrame {
             this.pantalla.setText("");
         } else if (!this.pantalla.getText().isEmpty()) {
             nuevoNumero = true;
+            puntoDecimal = false;
             modelo.setResultado(Double.parseDouble(this.pantalla.getText()));
             this.pantalla.setText("");
         }
@@ -908,10 +911,11 @@ public class Vista extends javax.swing.JFrame {
             n1 = (Double.parseDouble(this.pantalla.getText()));
             System.out.println(n1);
             modelo.calcula(modelo.getOperacion(), n1);
-
+            
             this.pantalla.setText("");
         } else if (!this.pantalla.getText().isEmpty()) {
             nuevoNumero = true;
+            puntoDecimal = false;
             modelo.setResultado(Double.parseDouble(this.pantalla.getText()));
             this.pantalla.setText("");
         }
@@ -927,7 +931,7 @@ public class Vista extends javax.swing.JFrame {
         if (fueOperando) {
             fueOperando = false;
             this.pantalla.setText("");
-       }else
+       }else    
         puntoDecimal = true;
         this.pantalla.setText(this.pantalla.getText() + ".");
         pantalla.setText(this.pantalla.getText());
