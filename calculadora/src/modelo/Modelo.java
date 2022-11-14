@@ -55,7 +55,7 @@ public class Modelo {
    
     }
    
-    public void borrar(double resultado) {
+    public void borrar() {
         this.resultado = 0;
     }
 
